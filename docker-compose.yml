@@ -1,0 +1,18 @@
+services:
+  doxy:
+    build: .
+    container_name: doxy
+    environment:
+      DOMAIN: test.com
+      LISTEN: ":80"
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - proxy
+    restart: unless-stopped
+
+networks:
+  proxy:
+    name: proxy

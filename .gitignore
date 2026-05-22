@@ -1,0 +1,23 @@
+# Build output
+/doxy
+/dist/
+*.exe
+
+# Go
+*.test
+*.out
+coverage.txt
+
+# Env / local config
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Claude Code local config
+.claude/

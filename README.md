@@ -3,7 +3,6 @@
 </p>
 
 <h1 align="center">doxy</h1>
---- 
 <p align="center">
   A tiny reverse proxy that auto-routes subdomains to running Docker containers — zero config required.
 </p>

@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">doxy</h1>
-
+--- 
 <p align="center">
   A tiny reverse proxy that auto-routes subdomains to running Docker containers — zero config required.
 </p>
@@ -24,6 +24,10 @@
 
 ## Usage
 
+The proxy needs:
+- Access to the Docker socket (`/var/run/docker.sock`)
+- The same Docker network as the containers it proxies to (compose uses a network named `proxy` — attach your app containers to it)
+
 ```sh
 DOMAIN=test.com go run .
 ```
@@ -34,9 +38,6 @@ Or with Docker:
 docker compose up -d --build
 ```
 
-The proxy needs:
-- Access to the Docker socket (`/var/run/docker.sock`)
-- The same Docker network as the containers it proxies to (compose uses a network named `proxy` — attach your app containers to it)
 
 ## Port selection
 

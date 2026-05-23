@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="doxy.png" alt="doxy" width="220">
+  <img src="doxy.png" alt="doxy" width="180">
 </p>
 
 <h1 align="center">doxy</h1>
 
 <p align="center">
-  A tiny reverse proxy that auto-routes <code>&lt;container&gt;.&lt;domain&gt;</code> to running Docker containers — zero config per container.
+  A tiny reverse proxy that auto-routes subdomains to running Docker containers — zero config required.
 </p>
 
 <p align="center">
@@ -17,6 +17,8 @@
 </p>
 
 ---
+
+## Proxy Behavior
 
 `hello.test.com` → the container named `hello`. No labels, no config files, no restarts. doxy watches the Docker socket and updates its routing table live as containers start and stop.
 
